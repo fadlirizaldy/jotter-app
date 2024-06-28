@@ -1,0 +1,148 @@
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  position: relative;
+  width: 30rem;
+}
+
+.close {
+  position: absolute;
+  top: 2px;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 38px;
+}
+
+.addBtn {
+  width: 70px;
+  height: 45px;
+  border-radius: 100px;
+  background-color: #00b8ea;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  left: -30px;
+  cursor: pointer;
+}
+
+.addIcon {
+  margin-right: 8px;
+}
+
+.titleModal {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: calc(80%);
+}
+
+.form label {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+.inputForm {
+  height: 1.5rem;
+  font-size: 1rem;
+  padding: 2px 5px;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: 2px solid rgba(27, 31, 35, 0.15);
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.inputTextArea {
+  font-size: 1rem;
+  border: none;
+  border-bottom: 2px solid rgba(27, 31, 35, 0.15);
+  outline: none;
+}
+
+.inputForm:focus,
+.inputTextArea:focus {
+  border-bottom: 2px solid #3498db;
+}
+
+.checkBox {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+.checkBox span {
+  cursor: pointer;
+}
+.checkBox input {
+  width: 18px;
+}
+
+.modalBtn {
+  display: flex;
+  gap: 10px;
+  margin-top: 2rem;
+  justify-content: flex-end;
+}
+
+.modalBtn button {
+  padding: 5px 10px;
+  width: 5.5rem;
+  /* height: 2rem; */
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.modalBtn button:nth-child(1) {
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1.5px solid #dc143c;
+  cursor: pointer;
+  text-align: center;
+}
+
+.modalBtn button:nth-child(1):hover {
+  background-color: #dc143c;
+  border: 1.5px solid #fff;
+  color: #fff;
+}
+
+.modalBtn button:nth-child(2) {
+  border-radius: 5px;
+  color: #fff;
+  background-color: #24a0ed;
+  border: 1.5px solid #64b5f6;
+  cursor: pointer;
+  text-align: center;
+}
+
+.modalBtn button:nth-child(2):hover {
+  background-color: #1976d2;
+  border: 1.5px solid #24a0ed;
+}
+
+.date {
+  color: gray;
+  margin: 10px 0;
+}
