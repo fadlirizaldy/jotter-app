@@ -23,27 +23,33 @@ const Navbar = () => {
       </h1>
       <div className="dark:text-white flex items-center gap-4">
         {theme === "light" ? (
-          <Icon
-            icon="ph:moon-fill"
-            className={"cursor-pointer "}
-            width={24}
-            onClick={handleToggleTheme}
-          />
+          <div className="tooltip tooltip-bottom" data-tip="Dark">
+            <Icon
+              icon="ph:moon-fill"
+              className={"cursor-pointer "}
+              width={24}
+              onClick={handleToggleTheme}
+            />
+          </div>
         ) : (
-          <Icon
-            icon="ph:sun-fill"
-            className={"cursor-pointer "}
-            width={24}
-            onClick={handleToggleTheme}
-          />
+          <div className="tooltip tooltip-bottom" data-tip="Light">
+            <Icon
+              icon="ph:sun-fill"
+              className={"cursor-pointer "}
+              width={24}
+              onClick={handleToggleTheme}
+            />
+          </div>
         )}
 
-        <Icon
-          icon="mdi:shutdown"
-          width={24}
-          className="cursor-pointer"
-          onClick={handleLogout}
-        />
+        <div className="tooltip tooltip-bottom" data-tip="Logout">
+          <Icon
+            icon="mdi:shutdown"
+            width={24}
+            className="cursor-pointer"
+            onClick={handleLogout}
+          />
+        </div>
       </div>
     </div>
   );
