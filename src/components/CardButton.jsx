@@ -23,7 +23,7 @@ const CardButton = ({
       </div>
       <ul
         tabIndex={0}
-        className="dropdown-content menu rounded-box z-[1] w-52 p-2 shadow bg-gray-100 dark:bg-dark-bg-primary dark:border dark:border-white"
+        className="dropdown-content menu rounded-box z-[100] w-52 p-2 shadow opacity-100 bg-gray-100 dark:bg-dark-bg-primary dark:border dark:border-white"
       >
         <li>
           <p

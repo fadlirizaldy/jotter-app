@@ -69,7 +69,10 @@ const Card = ({ data, setData }) => {
   };
 
   return (
-    <div className="relative p-3 border group border-slate-300 break-words rounded-md z-50 shadow-md min-h-[200px] gap-5 dark:bg-dark-bg-secondary">
+    <div
+      key={id}
+      className="relative p-3 border group border-slate-300 break-words rounded-md shadow-md min-h-[200px] gap-5 dark:bg-dark-bg-secondary"
+    >
       <div className="flex justify-between">
         <h1
           className="cursor-pointer font-semibold text-lg dark:text-white"
