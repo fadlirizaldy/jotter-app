@@ -11,37 +11,50 @@ const CardButton = ({
   const navigate = useNavigate();
 
   return (
-    <div className="p-1 w-fit absolute right-3 top-[39px] bg-white border border-slate-300 flex flex-col justify-center rounded-md">
-      <div className="flex items-center px-[1px] py-[3px] gap-1 rounded-md hover:bg-slate-200">
-        <Icon icon="iconamoon:edit-duotone" color="gray" />
-        <button
-          className="text-slate-600 text-sm"
-          onClick={() => navigate(`/note/${id}`)}
-        >
-          Detail
-        </button>
-      </div>
-      <div
-        className="cursor-pointer flex items-center px-[1px] py-[3px] gap-1 rounded-md hover:bg-slate-200"
-        onClick={() => handleArchiveActive()}
-      >
+    <div className="dropdown dropdown-hover hidden group-hover:block">
+      <div tabIndex={0} role="button" className="cursor-pointer">
         <Icon
-          icon={isArchived ? "hugeicons:note-03" : "material-symbols:archive"}
+          icon="bi:three-dots-vertical"
           color="gray"
+          width="20"
+          className="mt-1"
+          onClick={() => setShowOption((prev) => !prev)}
         />
-        <button className="text-slate-600 text-sm">
-          {isArchived ? "Active" : "Archive"}
-        </button>
       </div>
-      <div className="flex items-center px-[1px] py-[3px] gap-1 rounded-md hover:bg-slate-200">
-        <Icon icon="octicon:trash-16" color="gray" />
-        <button
-          className="text-slate-600 text-sm"
-          onClick={() => handleDeleteNote()}
-        >
-          Delete
-        </button>
-      </div>
+      <ul
+        tabIndex={0}
+        className="dropdown-content menu rounded-box z-[1] w-52 p-2 shadow bg-gray-100 dark:bg-dark-bg-primary dark:border dark:border-white"
+      >
+        <li>
+          <p
+            className="text-slate-600 text-md dark:text-white"
+            onClick={() => navigate(`/note/${id}`)}
+          >
+            <Icon icon="iconamoon:edit-duotone" color="gray" />
+            Detail
+          </p>
+        </li>
+        <li onClick={() => handleArchiveActive()}>
+          <p className="text-slate-600 text-md dark:text-white">
+            <Icon
+              icon={
+                isArchived ? "hugeicons:note-03" : "material-symbols:archive"
+              }
+              color="gray"
+            />
+            {isArchived ? "Active" : "Archive"}
+          </p>
+        </li>
+        <li>
+          <p
+            className="text-slate-600 text-md dark:text-white"
+            onClick={() => handleDeleteNote()}
+          >
+            <Icon icon="octicon:trash-16" color="red" />
+            Delete
+          </p>
+        </li>
+      </ul>
     </div>
   );
 };

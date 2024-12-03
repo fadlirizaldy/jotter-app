@@ -70,7 +70,14 @@ const Card = ({ data, setData }) => {
 
   return (
     <div className="relative p-3 border group border-slate-300 break-words rounded-md z-50 shadow-md min-h-[200px] gap-5 dark:bg-dark-bg-secondary">
-      {showOption && (
+      <div className="flex justify-between">
+        <h1
+          className="cursor-pointer font-semibold text-lg dark:text-white"
+          onClick={() => navigate(`/note/${id}`)}
+        >
+          {title}
+        </h1>
+
         <CardButton
           key={id}
           id={id}
@@ -78,22 +85,8 @@ const Card = ({ data, setData }) => {
           handleDeleteNote={handleDeleteNote}
           handleArchiveActive={handleArchiveActive}
         />
-      )}
+      </div>
 
-      <Icon
-        icon="bi:three-dots-vertical"
-        color="gray"
-        width="24"
-        className="hidden absolute group-hover:block right-2 cursor-pointer z-[100] p-1 transition-all active:border active:border-slate-300 active:rounded-full"
-        onClick={() => setShowOption((prev) => !prev)}
-      />
-
-      <h1
-        className="cursor-pointer font-semibold text-lg dark:text-white"
-        onClick={() => navigate(`/note/${id}`)}
-      >
-        {title}
-      </h1>
       <p className="text-slate-400 font-medium mb-3 text-xs dark:text-slate-300">
         {showFormattedDate(createdAt)}
       </p>

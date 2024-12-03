@@ -48,7 +48,6 @@ const Modal = ({ setData, setShowModal }) => {
     toast.success("Note saved!", { autoClose: 2000 });
   };
 
-  console.log(inputData);
   return (
     <div className={`dark:text-slate-300 ${styles.modal}`}>
       <div className={`dark:bg-dark-bg-secondary ${styles.modalContent}`}>

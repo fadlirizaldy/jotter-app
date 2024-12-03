@@ -68,12 +68,12 @@ const DetailPage = () => {
               onClick={() => navigate(-1)}
             >
               <Icon icon="ion:chevron-back-outline" color="gray" width="18" />
-              <p>Back</p>
+              <p className="dark:text-white">Back</p>
             </div>
 
             <section className="mt-6 sm:px-6">
               <div className="flex items-center justify-between">
-                <h1 className="font-semibold text-2xl underline">
+                <h1 className="font-semibold text-2xl underline dark:text-white">
                   {data?.title}
                 </h1>
                 <div className="flex sm:flex-row flex-col items-center gap-2">
@@ -96,7 +96,7 @@ const DetailPage = () => {
               <p className="text-slate-400 font-medium mb-3 text-sm mt-1">
                 {showFormattedDate(data?.createdAt)}
               </p>
-              <p>{data?.body}</p>
+              <p className="dark:text-slate-50">{data?.body}</p>
             </section>
           </>
         )}
